@@ -30,10 +30,8 @@ export class BtPumpPluginWeb extends WebPlugin implements BtPumpPluginPlugin {
     })
   }
 
-  disconnect(): Promise<{ isConnected: string }> {
-    return new Promise(function (resolve) {
-      resolve({isConnected:"You can't connect with pump from browser!"});
-    })
+  async disconnect(): Promise<void> {
+
   }
 
   keyCheck(): Promise<{ key: string }> {
